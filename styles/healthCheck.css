@@ -1,0 +1,389 @@
+.healthcheck-form-section {
+  overflow: hidden;
+}
+.healthcheck-form-section .form-wrap {
+  padding: 50px 30px 50px 62px;
+  box-shadow: 0px 0 7px 5px rgb(196 188 188 / 41%);
+}
+.healthcheck-form-section .form-wrap .form-steps-list {
+  counter-reset: step-counter 0;
+}
+.healthcheck-form-section .form-wrap .step-wrap {
+  position: relative;
+  counter-increment: step-counter 1;
+}
+.healthcheck-form-section .form-wrap .step-wrap::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  height: 22px;
+  width: 22px;
+  border-radius: 100%;
+  padding: 3px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #ec0055;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px;
+}
+.healthcheck-form-section .form-wrap .step-wrap::after {
+  content: "";
+  position: absolute;
+  width: 0.5px;
+  top: 36px;
+  left: -24px;
+  bottom: -2px;
+  background-color: #d0d0d0;
+}
+.healthcheck-form-section .form-wrap .step-wrap:last-child::after {
+  display: none;
+}
+.healthcheck-form-section .form-wrap .step-wrap.success::before {
+  content: "";
+  background-color: #2e7d32;
+  background-image: url(../public/white-tick.svg);
+}
+.healthcheck-form-section .form-wrap .step-wrap.active::before {
+  content: "";
+  background-color: #2e7d32;
+  background-image: url(../public/white-tick.svg);
+}
+.healthcheck-form-section .form-wrap .step-wrap.success::after {
+  background-color: #2e7d32;
+}
+.healthcheck-form-section .form-wrap .step-wrap .step-title-block {
+  padding: 8px 10px;
+  background-color: #601a79;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 3px;
+}
+.healthcheck-form-section .form-wrap .step-wrap .step-content-block {
+  padding: 15px 0;
+}
+.formError {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* form-group css */
+.healthcheck-form-section .form-wrap .form-group-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.healthcheck-form-section .form-wrap .form-group-wrap .form-group {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+.healthcheck-form-section
+  .form-wrap
+  .form-group-wrap
+  .form-group
+  .form-control {
+  width: 100%;
+}
+.healthcheck-form-section .form-wrap .btn-wrap {
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* file upload block */
+.healthcheck-form-section .form-wrap .upload-info-list li {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 30px;
+  position: relative;
+  text-align: left;
+  color: #989898;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+.healthcheck-form-section .form-wrap .upload-info-list li p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.healthcheck-form-section .form-wrap .upload-info-list li p:last-child {
+  margin: 0;
+}
+.healthcheck-form-section .form-wrap .upload-info-list li::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-image: url(../public/checkmark-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+.healthcheck-form-section .form-wrap .file-upload-block {
+  display: flex;
+  margin: 0 -15px;
+}
+.healthcheck-form-section .form-wrap .file-upload-block .upload-block {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+.healthcheck-form-section .form-wrap .file-upload-block .info-list-block {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+.healthcheck-form-section .form-wrap .uploaded-file-list .chip-list {
+  padding: 20px 0;
+  margin: 0 -5px -10px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.healthcheck-form-section .form-wrap .uploaded-file-list .chip-list li {
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+.healthcheck-form-section .form-wrap .uploaded-file-list .chip-list li > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #00e676;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+.healthcheck-form-section .form-wrap .uploaded-file-list .chip-list li p {
+  color: #00e676;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.healthcheck-form-section .form-wrap .uploaded-file-list .chip-list li a {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.healthcheck-form-section
+  .form-wrap
+  .uploaded-file-list
+  .chip-list
+  li.rejected
+  > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff1744;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+.healthcheck-form-section
+  .form-wrap
+  .uploaded-file-list
+  .chip-list
+  li.rejected
+  p {
+  color: #ff1744;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.healthcheck-form-section
+  .form-wrap
+  .uploaded-file-list
+  .chip-list
+  li.active
+  > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c4c4c4;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+.healthcheck-form-section
+  .form-wrap
+  .uploaded-file-list
+  .chip-list
+  li.active
+  p {
+  color: #c4c4c4;
+  font-size: 13px;
+  margin-right: 5px;
+}
+/* input css */
+.healthcheck-form-section .form-group .MuiFormLabel-root {
+  color: #989898;
+  font-family: "Montserrat", sans-serif;
+}
+.healthcheck-form-section .form-group .MuiFormLabel-root.Mui-focused {
+  color: #989898;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #d0d0d0;
+  font-family: "Montserrat", sans-serif;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #d0d0d0;
+  border-width: 1px;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root.Mui-error
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #fdada3;
+  border-width: 1px;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root.Mui-focused.Mui-error
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #fdada3;
+  border-width: 1px;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #d0d0d0;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiInputBase-root.Mui-error:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #fdada3;
+}
+.healthcheck-form-section .form-group .MuiInputBase-input {
+  color: #212121;
+  font-family: "Montserrat", sans-serif;
+}
+.healthcheck-form-section
+  .form-group
+  .MuiFormControl-root
+  .Mui-error.MuiFormHelperText-root {
+  color: #fe8576;
+}
+
+/* phone number input */
+.form-group.mob-number .react-tel-input .flag-dropdown {
+  background: #f5f5f5 !important;
+  border-right: 1px solid #d0d0d0 !important;
+}
+.form-group.mob-number .react-tel-input .country-list .country {
+  padding: 15px !important;
+  font-family: "Montserrat", sans-serif;
+  color: #212121;
+  font-size: 16px;
+}
+.form-group.mob-number .react-tel-input .form-control {
+  font-family: "Montserrat", sans-serif;
+  color: #212121;
+  height: 56px !important;
+  line-height: 56px !important;
+  padding: 0 15px;
+  width: 100% !important;
+  border-radius: 4px !important;
+  padding-left: 90px !important;
+  font-size: 16px !important;
+  border-color: #d0d0d0;
+}
+.form-group.mob-number .react-tel-input .form-control:hover {
+  border-color: #d0d0d0;
+}
+.form-group.mob-number .react-tel-input .form-control:focus {
+  border-color: #d0d0d0;
+}
+.form-group.mob-number .react-tel-input .form-control:hover ~ .flag-dropdown {
+  border-color: #d0d0d0 !important;
+}
+.form-group.mob-number .react-tel-input .form-control:focus ~ .flag-dropdown {
+  border-color: #d0d0d0 !important;
+}
+
+/* .form-group.mob-number .react-tel-input .form-control.has-error { border-color: #fdada3; } 
+.form-group.mob-number .react-tel-input .form-control.has-error ~ .flag-dropdown { border-color: #fdada3 !important; } 
+.form-group.mob-number .react-tel-input .form-control.has-error:hover ~ .flag-dropdown { border-color: #fdada3 !important; } 
+.form-group.mob-number .react-tel-input .form-control.has-error:focus ~ .flag-dropdown { border-color: #fdada3 !important; } */
+.form-group.mob-number .react-tel-input .selected-flag .arrow {
+  border: 0 !important;
+  background-image: url("../public/dropdown-icon.svg");
+  height: 5px !important;
+  width: 10px !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 36px !important;
+}
+.form-group.mob-number .react-tel-input .selected-flag .flag {
+  left: 16px;
+}
+.form-group.mob-number .react-tel-input .selected-flag {
+  width: 77px !important;
+}
+.form-group.mob-number .react-tel-input .country-list {
+  box-shadow: none !important;
+  border: 1px solid #d0d0d0 !important;
+}
+
+/* checkbox css */
+.MuiCheckbox-root svg path {
+  fill: #989898;
+}
+.MuiCheckbox-root.Mui-checked svg path {
+  fill: #ec0055;
+}
+.checkbox-group .checkbox-item {
+  margin-bottom: 15px;
+  color: #989898;
+  font-weight: 400;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+}
+.checkbox-group .checkbox-item .MuiTypography-root {
+  padding-top: 7px;
+  font-family: "Montserrat", sans-serif;
+}
+.checkbox-group .checkbox-item .MuiTypography-root a {
+  color: #ec0055;
+  font-weight: 700;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .healthcheck-form-section .form-wrap .form-group-wrap .form-group {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .healthcheck-form-section .form-wrap .file-upload-block {
+    flex-direction: column;
+  }
+  .healthcheck-form-section .form-wrap .file-upload-block .upload-block {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .healthcheck-form-section .form-wrap .file-upload-block .info-list-block {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .healthcheck-form-section .form-wrap .step-wrap .step-title-block {
+    font-size: 16px;
+  }
+  .healthcheck-form-section .form-wrap {
+    padding: 30px 30px 30px 50px;
+  }
+  .checkbox-group .checkbox-item .MuiTypography-root {
+    font-size: 14px;
+  }
+}
